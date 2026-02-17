@@ -4,3 +4,13 @@
 body {
     /* Custom styles can be added here */
 }
+
+.hero-section {
+    min-height: 90vh;
+}
+
+.hero-title {
+    padding: 2rem 0;
+    border-radius: 0.5rem;
+}
+
