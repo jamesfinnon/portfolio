@@ -16,3 +16,7 @@ body {
     border-radius: 0.5rem;
 }
 
+:root {
+  --bs-primary: red;
+}
+
