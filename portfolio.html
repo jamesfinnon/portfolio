@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--sets width of content to be responsive  to device and links to stylesheet-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-</head>
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
+<!--sets background to dark and text to white through bootstrap-->
 <body class="bg-dark text-white">
+
+    <!--navbar - will compress to menu when necessary-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+
+            <!--container fluid will expand or shrink to fit the screen size -->
             <div class="container-fluid">
+
+                <!--site heading - links back to home-->
                 <a class="navbar-brand" href="index.html">My Portfolio</a>
+
+                <!--button when menu is collapsed-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!--links to other pages-->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -33,12 +44,21 @@
                 </div>
             </div>
         </nav>
-        <h1 class="display-4">My Projects Portfolio</h1>
+        
     </header>
-    <div class="container mt-4">
-        <!-- Featured Projects Carousel -->
-        <div id="featuredProjectsCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+
+    <!-- main tag with top margin, contains main page content-->
+    <main class="container mt-4">
+
+        <!--h1 in main for better alignment-->
+        <h1 class="display-4">My Projects Portfolio</h1>
+
+        <!--featured projects carousel-->
+        <section id="featuredProjectsCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+
             <div class="carousel-inner">
+
+                <!--carousel item - storeroom-->
                 <div class="carousel-item">
                     <img src="images/portfolio/digitalStoreroomSmall.jpg" class="d-block w-100 rounded"
                         alt="Digital Storeroom">
@@ -47,6 +67,8 @@
                         <a href="digitalStoreroom.html" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
+
+                <!--carousel item - plantDB-->
                 <div class="carousel-item">
                     <img src="images/portfolio/plantDBSmall.jpg" class="d-block w-100 rounded"
                         alt="Plant Species Database">
@@ -55,6 +77,8 @@
                         <a href="plantDB.html" class="btn btn-primary">View Project</a>
                     </div>
                 </div>
+
+                <!--carousel item - project nova - initially shown (active)-->
                 <div class="carousel-item active">
                     <img src="images/portfolio/projectNova.jpg" class="d-block w-100 rounded" alt="Project Nova">
                     <div class="carousel-caption d-md-block bg-dark bg-opacity-75 rounded p-2">
@@ -63,29 +87,40 @@
                     </div>
                 </div>
             </div>
+
+            <!--move carousel back-->
             <button class="carousel-control-prev" type="button" data-bs-target="#featuredProjectsCarousel"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
+
+            <!--move carousel forward-->
             <button class="carousel-control-next" type="button" data-bs-target="#featuredProjectsCarousel"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div>
-        <!-- End Featured Projects Carousel -->
-        <div class="text-center mb-5">
+        </section>
+
+        <!--dropdown project button section-->
+        <section class="text-center mb-5">
             <h2 class="h4">Explore More Projects</h2>
             <p class="mb-3">Discover all of my projects, including detailed descriptions and screenshots. Click below to
                 view the full list.</p>
+            
+            <!--button to show all projects in collapse section -->
             <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
                 data-bs-target="#allProjectsCollapse" aria-expanded="false" aria-controls="allProjectsCollapse">View All
                 Projects</button>
-        </div>
-        <!-- Project Cards (can be updated or removed as needed) -->
-        <div class="collapse" id="allProjectsCollapse">
+        </section>
+        <!--project cards - repeatable format-->
+        <section class="collapse" id="allProjectsCollapse">
+
+            <!--row of cards with 3 columns on medium and larger screens, 1 column on smaller screens-->
             <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+                <!--digital storeroom-->
                 <div class="col">
                     <div class="card h-100 bg-dark text-white">
                         <img src="images/portfolio/digitalStoreroomSmall.jpg" class="card-img-top"
@@ -97,6 +132,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!--plant species database-->
                 <div class="col">
                     <div class="card h-100 bg-dark text-white">
                         <img src="images/portfolio/plantDBSmall.jpg" class="card-img-top" alt="Plant Species Database">
@@ -107,6 +144,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!--project nova-->
                 <div class="col">
                     <div class="card h-100 bg-dark text-white">
                         <img src="images/portfolio/projectNovaSmall.jpg" class="card-img-top" alt="Project Nova">
@@ -118,9 +157,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+    </main>
     </div>
 </body>
+
+<!--footer with contact info and link to github repository-->
 <footer class="footer mt-auto py-3 bg-black text-white">
     <div class="container-fluid text-center">
         <span>
@@ -132,6 +174,8 @@
         </span>
     </div>
 </footer>
+
+<!--bootstrap js and popper for dropdowns and collapse functionality-->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
