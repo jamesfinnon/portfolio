@@ -41,9 +41,16 @@
         <hr class="bg-secondary">
         <h3 class="h5 mt-3">Basic Premise</h3>
         <!-- Add basic premise details here -->
-        <button class="btn btn-outline-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#additionalFeaturesCollapse" aria-expanded="false" aria-controls="additionalFeaturesCollapse">
-            Additional Features
-        </button>
+        <div class="d-flex align-items-center mb-3">
+            <h3 class="h5 mt-3 mb-0 me-2" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#additionalFeaturesCollapse" aria-expanded="false" aria-controls="additionalFeaturesCollapse">
+                Additional Features
+            </h3>
+            <span data-bs-toggle="collapse" data-bs-target="#additionalFeaturesCollapse" aria-expanded="false" aria-controls="additionalFeaturesCollapse" style="cursor:pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </span>
+        </div>
         <div class="collapse" id="additionalFeaturesCollapse">
             <div class="card card-body bg-dark text-white border-secondary">
                 <h4 class="h6 mt-3">GUI</h4>
