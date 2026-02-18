@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Nova</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="bg-dark text-white">
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -30,70 +33,129 @@
     </nav>
     <main class="container mt-5">
         <h1 class="display-4 mb-4">Project Nova</h1>
-        <p class="lead mb-4">Project Nova is a battleship-like guessing game implemented in Java, designed to challenge players' logic and strategy skills.</p>
+        <p class="lead mb-4">Project Nova is a battleship-like guessing game implemented in Java, designed to challenge
+            players' logic and strategy skills.</p>
         <h2 class="h4 mt-4">Background</h2>
         <hr class="bg-secondary">
-        <!-- Add background information here -->
+        <p>Project Nova is a guessing game where you take turns with either another player or the computer, guessing the
+            location of creatures on a grid. On each guess, you may uncover, creatures, traps, powerups and sinkholes,
+            each of which will add an element of unpredictability to the game.</p>
+        <p>This was made as part of CS11002, and was my final project for the module.</p>
         <h2 class="h4 mt-4">Creating and Starting the Game</h2>
         <hr class="bg-secondary">
-        <!-- Add details about game setup here -->
+        <p>When initially launching the program, the game grid will appear, but is unusable until a new game is created,
+            or a game is loaded. If a new game is created, the program will first ask if you would like to play the
+            computer, or another player. The program will then ask for the users name(s), and update the scoreboard with
+            the relevant information.</p>>
         <h2 class="h4 mt-4">Playing the Game</h2>
         <hr class="bg-secondary">
         <h3 class="h5 mt-3">Basic Premise</h3>
-        <!-- Add basic premise details here -->
+        <p>In a multiplayer game, the players will take turns guessing the locations of creatures. If they guess
+            correctly, they gain 5 points, and take another turn. If playing against the computer, the player will take
+            their turn, and the computer will automatically make their guess. The player with the points when all
+            creatures have been found is deemed to be the winner.</p>>
         <div class="d-flex align-items-center mb-3">
-            <h3 class="h5 mt-3 mb-0 me-2" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#additionalFeaturesCollapse" aria-expanded="false" aria-controls="additionalFeaturesCollapse">
+            <h3 class="h5 mt-3 mb-0 me-2" style="cursor:pointer;" data-bs-toggle="collapse"
+                data-bs-target="#additionalFeaturesCollapse" aria-expanded="false"
+                aria-controls="additionalFeaturesCollapse">
                 Additional Features
             </h3>
-            <span data-bs-toggle="collapse" data-bs-target="#additionalFeaturesCollapse" aria-expanded="false" aria-controls="additionalFeaturesCollapse" style="cursor:pointer;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+            <span data-bs-toggle="collapse" data-bs-target="#additionalFeaturesCollapse" aria-expanded="false"
+                aria-controls="additionalFeaturesCollapse" style="cursor:pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                 </svg>
             </span>
         </div>
         <div class="collapse" id="additionalFeaturesCollapse">
             <div class="card card-body bg-dark text-white border-secondary">
                 <h4 class="h6 mt-3">GUI</h4>
-                <!-- GUI details -->
+                <p>As already mentioned, the game runs through a graphical user interface. This means the user can click
+                    on the tile they would like to guess, and the game will reveal the tile through colours and popup
+                    messages. In fact, all inputs and outputs are done through this GUI, and nothing is received or sent
+                    by the console. This allows for a seamless user experience, as everything is right in front of you.
+                </p>
                 <h4 class="h6 mt-3">Complex Creatures</h4>
-                <!-- Complex creatures details -->
+                <p>Creatures are not just single square objects, but rather, span across multiple squares, in all
+                    different shapes in sizes. The game contains 10 types of creatures, and each one will spawn once per
+                    game, in a random location and orientation. When clicked, a creature cell will turn either green or
+                    blue, depending on the player that found it. When a player reveals the last square of a creature,
+                    the entire creature will turn pink, and said player is awarded an additional 5 points</p>
                 <h4 class="h6 mt-3">Health</h4>
-                <!-- Health details -->
+                <p>Each player starts with a base 100hp. This can be increased through powerups, or decreased by traps.
+                    If a players health reaches zero at any point, they immediately lose.</p>
                 <h4 class="h6 mt-3">Booby Traps</h4>
-                <!-- Booby traps details -->
+                <p>There are three types of booby traps: sea mines, bombfish, and kelp. Each trap will generate a random
+                    amount of times, in random locations on the grid. Sea mines will make the player lose 20hp, bombfish
+                    will make the player lose 10 points, and kelp will tangle the player, making them lose a turn. When
+                    clicked, the program will notify the user of what trap they have discovered, its effect, and its
+                    square on the grid will be coloured in red.</p>
                 <h4 class="h6 mt-3">Power Ups</h4>
-                <!-- Power ups details -->
+                <p>There are three types of powerups: Health boosts, extra turns, and the reveal. Health boosts and
+                    extra turns are fairly self-explanatory, providing 20hp, and a bonus turn respectively. The reveal
+                    on the other hand is a bit more fancy. It will reveal the location of a random creature cell on the
+                    grid. This is especially useful for finding those tricky small creatures, when all the big ones have
+                    been found. Like traps, when clicked the program will notify the user of the power up and its
+                    effect. The associated square on the grid will also be coloured in white.</p>
                 <h4 class="h6 mt-3">Sinkholes</h4>
-                <!-- Sinkholes details -->
+                <p>Completing the trifecta of the additional elements is the sinkhole. This special square will act as
+                    though the user who found the sinkhole has activated all neighbouring 8 cells. This includes gaining
+                    score from creatures, and also power ups! What makes sinkholes dangerous however, is they can also
+                    activate traps. When multiple sinkholes are in close proximity, this can start a chain reaction, for
+                    better or for worse. When found, sinkholes are coloured in black.</p>
                 <h4 class="h6 mt-3">Turn Limits</h4>
-                <!-- Turn limits details -->
+                <p>At the centre of the scoreboard is a timer, which will count down from 10 seconds at the start of
+                    each turn. If it runs out, play immediately switches to the other user. This is more to speed up
+                    gameplay.</p>
                 <h4 class="h6 mt-3">Computer Player</h4>
-                <!-- Computer player details -->
+                <p>As mentioned previously, at the start of the game, the user has the option to play against the
+                    computer. This computer is fairly stupid, basically blind guessing random squares across the board.
+                    A more intelligent version was considered, however for a simple prototype game, it was deemed too
+                    complicated. Please see design considerations for further details. This version does work however,
+                    and provides a reasonable oppent, especially for a new player.</p>
                 <h4 class="h6 mt-3">Difficulties</h4>
-                <!-- Difficulties details -->
+                <p>When creating a new game, the user can choose between five difficulties: Freeplay, easy, medium, hard
+                    and impossible. This affects the maximum number of traps, powerups and sinkholes that can be
+                    generated. For full details, see the extended evaluation.</p>
                 <h4 class="h6 mt-3">Saving and Loading</h4>
-                <!-- Saving and loading details -->
+                <p>FILL THIS IN</p>
             </div>
         </div>
         <h2 class="h4 mt-4">Design Considerations</h2>
         <hr class="bg-secondary">
         <h3 class="h5 mt-3">Time Limit - Penalty</h3>
-        <!-- Time limit penalty details -->
+        <p>Initially, I considered adding a harsher penalty for running out of time, such as losing health or score. But
+            turns are so powerful in this game, as an opponent could go on a run of guessing multiple creature squares
+            in a row, making losing your turn in my mind a fitting punishment.</p>
         <h3 class="h5 mt-3">Mega Guess</h3>
-        <!-- Mega guess details -->
+        <p>The game brief suggested the implementation of a 'mega guess,' which when clicked would reveal all squares
+            around it. This was considered to be added as a powerup, that the user could choose to use at any point.
+            However, a more interesting and simpler idea was added instead. The sinkhole. Although not outlined in the
+            mega guess, the sinkhole to me was more engaging if it acted as a player click, which activated traps and
+            powerups. A fun quirk of this was sinkhole chain reactions, which can be extremely rewarding or devastating
+            depending on the context.</p>
         <h3 class="h5 mt-3">Hints</h3>
-        <!-- Hints details -->
+        <p>A competitive two player game to me didn’t warrant the inclusion of hints. So instead, a similar effect was
+            achieved through the reveal powerup. This, like a hint, revealed one creature coordinate. This is especially
+            powerful for the smaller creatures, which can be hard to get a start on. In my opinion, this was a much more
+            natural inclusion of a mechanism to help the players locate creatures, and was simple enough to implement.
+        </p>
     </main>
     <footer class="footer mt-auto py-3 bg-black text-white">
         <div class="container-fluid text-center">
             <span>
-                <a href="https://github.com/jamesfinnon/portfolio" class="text-white me-3" target="_blank" rel="noopener">GitHub Repository</a>
+                <a href="https://github.com/jamesfinnon/portfolio" class="text-white me-3" target="_blank"
+                    rel="noopener">GitHub Repository</a>
                 |
-                <span class="ms-3">Email: <a href="mailto:2690750@dundee.ac.uk" class="text-white">2690750@dundee.ac.uk</a></span>
+                <span class="ms-3">Email: <a href="mailto:2690750@dundee.ac.uk"
+                        class="text-white">2690750@dundee.ac.uk</a></span>
             </span>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
