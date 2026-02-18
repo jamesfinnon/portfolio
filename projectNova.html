@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!--sets width of content to be responsive to device and links to stylesheet-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,14 @@
 </head>
 
 <!--sets background to dark and text to white through bootstrap-->
+
 <body class="bg-dark text-white">
 
     <!--navbar - will compress to menu when necessary-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-
-            <!--container fluid will expand or shrink to fit the screen size -->
             <div class="container-fluid">
-
-                <!--site heading - links back to home-->
                 <a class="navbar-brand" href="index.html">My Portfolio</a>
-
-                <!--button when menu is compressed-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,228 +38,378 @@
                 </div>
             </div>
         </nav>
-
-        <h1 class="display-4 mb-4">Project Nova</h1>
     </header>
-    <main class="container mt-5">
 
-        <div class="my-4">
+    <!--main tag with top margin, contains main page content-->
+    <main class="container mt-5">
+        <header>
+            <h1 class="display-4 mb-4">Project Nova</h1>
+        </header>
+
+        <!--download project button with top and bottom margin-->
+        <section class="my-4">
             <a href="projectDownloads/ProjectNova.zip" class="btn btn-success btn-lg" download>
                 <i class="bi bi-download"></i> Download Project Nova (ZIP)
             </a>
-        </div>
-        <p class="lead mb-4">Project Nova is a battleship-like guessing game implemented in Java, designed to challenge
-            players' logic and strategy skills.</p>
-        <h2 class="h4 mt-4">Background</h2>
-        <hr class="bg-secondary">
-        <p>Project Nova is a guessing game where you take turns with either another player or the computer, guessing the
-            location of creatures on a grid. On each guess, you may uncover, creatures, traps, powerups and sinkholes,
-            each of which will add an element of unpredictability to the game.</p>
-        <p>This was made as part of CS11002, and was my final project for the module.</p>
-        <h2 class="h4 mt-4">Creating and Starting the Game</h2>
-        <hr class="bg-secondary">
-        <p>When initially launching the program, the game grid will appear, but is unusable until a new game is created,
-            or a game is loaded. If a new game is created, the program will first ask if you would like to play the
-            computer, or another player. The program will then ask for the users name(s), and update the scoreboard with
-            the relevant information.</p>
-        <h2 class="h4 mt-4">Playing the Game</h2>
-        <hr class="bg-secondary">
-        <h3 class="h5 mt-3">Basic Premise</h3>
-        <p>In a multiplayer game, the players will take turns guessing the locations of creatures. If they guess
-            correctly, they gain 5 points, and take another turn. If playing against the computer, the player will take
-            their turn, and the computer will automatically make their guess. The player with the points when all
-            creatures have been found is deemed to be the winner.</p>
-        <div class="d-flex align-items-center mb-3">
-            <h3 class="h5 mt-3 mb-0 me-2" style="cursor:pointer;" data-bs-toggle="collapse"
-                data-bs-target="#additionalFeaturesCollapse" aria-expanded="false"
-                aria-controls="additionalFeaturesCollapse">
-                Additional Features
-            </h3>
-            <span data-bs-toggle="collapse" data-bs-target="#additionalFeaturesCollapse" aria-expanded="false"
-                aria-controls="additionalFeaturesCollapse" style="cursor:pointer;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                    class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                </svg>
-            </span>
-        </div>
-        <div class="collapse" id="additionalFeaturesCollapse">
-            <div class="card card-body bg-dark text-white border-secondary">
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">GUI</h4>
-                        <p>As already mentioned, the game runs through a graphical user interface. This means the user
-                            can click
-                            on the tile they would like to guess, and the game will reveal the tile through colours and
-                            popup
-                            messages. In fact, all inputs and outputs are done through this GUI, and nothing is received
-                            or sent
-                            by the console. This allows for a seamless user experience, as everything is right in front
-                            of you.
-                        </p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/GUI.jpg" alt="GUI" class="img-fluid rounded shadow mb-2"
-                            style="max-width: 100%;">
-                        <div><small class="text-white-50">Graphical User Interface</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Complex Creatures</h4>
-                        <p>Creatures are not just single square objects, but rather, span across multiple squares, in
-                            all
-                            different shapes in sizes. The game contains 10 types of creatures, and each one will spawn
-                            once per
-                            game, in a random location and orientation. When clicked, a creature cell will turn either
-                            green or
-                            blue, depending on the player that found it. When a player reveals the last square of a
-                            creature,
-                            the entire creature will turn pink, and said player is awarded an additional 5 points</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/complexCreature.jpg" alt="Complex Creatures"
-                            class="img-fluid rounded shadow mb-2" style="max-width: 150px; width: 100%;">
-                        <div><small class="text-white-50">Complex Creatures</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Health</h4>
-                        <p>Each player starts with a base 100hp. This can be increased through powerups, or decreased by
-                            traps.
-                            If a players health reaches zero at any point, they immediately lose.</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/HP.jpg" alt="Health" class="img-fluid rounded shadow mb-2"
-                            style="max-width: 100%;">
-                        <div><small class="text-white-50">Health System</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Booby Traps</h4>
-                        <p>There are three types of booby traps: sea mines, bombfish, and kelp. Each trap will generate
-                            a random
-                            amount of times, in random locations on the grid. Sea mines will make the player lose 20hp,
-                            bombfish
-                            will make the player lose 10 points, and kelp will tangle the player, making them lose a
-                            turn. When
-                            clicked, the program will notify the user of what trap they have discovered, its effect, and
-                            its
-                            square on the grid will be coloured in red.</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/Kelp.jpg" alt="Booby Traps" class="img-fluid rounded shadow mb-2"
-                            style="max-width: 100%;">
-                        <div><small class="text-white-50">Booby Traps</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Power Ups</h4>
-                        <p>There are three types of powerups: Health boosts, extra turns, and the reveal. Health boosts
-                            and
-                            extra turns are fairly self-explanatory, providing 20hp, and a bonus turn respectively. The
-                            reveal
-                            on the other hand is a bit more fancy. It will reveal the location of a random creature cell
-                            on the
-                            grid. This is especially useful for finding those tricky small creatures, when all the big
-                            ones have
-                            been found. Like traps, when clicked the program will notify the user of the power up and
-                            its
-                            effect. The associated square on the grid will also be coloured in white.</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/PowerUp.jpg" alt="Power Ups" class="img-fluid rounded shadow mb-2"
-                            style="max-width: 100%;">
-                        <div><small class="text-white-50">Power Ups</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Sinkholes</h4>
-                        <p>Completing the trifecta of the additional elements is the sinkhole. This special square will
-                            act as
-                            though the user who found the sinkhole has activated all neighbouring 8 cells. This includes
-                            gaining
-                            score from creatures, and also power ups! What makes sinkholes dangerous however, is they
-                            can also
-                            activate traps. When multiple sinkholes are in close proximity, this can start a chain
-                            reaction, for
-                            better or for worse. When found, sinkholes are coloured in black.</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/Sinkhole.jpg" alt="Sinkholes" class="img-fluid rounded shadow mb-2"
-                            style="max-width: 100%;">
-                        <div><small class="text-white-50">Sinkholes</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Turn Limits</h4>
-                        <p>At the centre of the scoreboard is a timer, which will count down from 10 seconds at the
-                            start of
-                            each turn. If it runs out, play immediately switches to the other user. This is more to
-                            speed up
-                            gameplay.</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/Timer.jpg" alt="Turn Limits" class="img-fluid rounded shadow mb-2"
-                            style="max-width: 100%;">
-                        <div><small class="text-white-50">Turn Limits</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Computer Player</h4>
-                        <p>As mentioned previously, at the start of the game, the user has the option to play against
-                            the
-                            computer. This computer is fairly stupid, basically blind guessing random squares across the
-                            board.
-                            A more intelligent version was considered, however for a simple prototype game, it was
-                            deemed too
-                            complicated. This version does work however, and provides a reasonable oppent, especially
-                            for a new
-                            player.</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/Computer.jpg" alt="Computer Player"
-                            class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
-                        <div><small class="text-white-50">Computer Player</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Difficulties</h4>
-                        <p>When creating a new game, the user can choose between five difficulties: Freeplay, easy,
-                            medium, hard
-                            and impossible. This affects the maximum number of traps, powerups and sinkholes that can be
-                            generated. For full details, see the extended evaluation.</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/Difficulties.jpg" alt="Difficulties"
-                            class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
-                        <div><small class="text-white-50">Difficulties</small></div>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-4">
-                    <div class="col-md-8 order-md-1">
-                        <h4 class="h6 mt-3">Saving and Loading</h4>
-                        <p>The game allows the user to save the current game state to local storage, and then load it
-                            later on.
-                            This works for both single and multiplayer games. The user can also choose the location of
-                            the save
-                            file through the a built in file browser.</p>
-                    </div>
-                    <div class="col-md-4 text-center order-md-2">
-                        <img src="images/projectNova/Load.jpg" alt="Saving and Loading"
-                            class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
-                        <div><small class="text-white-50">Saving and Loading</small></div>
-                    </div>
+        </section>
+
+        <!--standout paragraph-->
+        <p class="lead mb-4">Project Nova is a battleship-like guessing game implemented in Java.</p>
+
+        <!--background section-->
+        <section>
+            <h2 class="h4 mt-4">Background</h2>
+
+            <!--horizontal line for section separation-->
+            <hr class="bg-secondary">
+
+            <p>Project Nova is a guessing game where you take turns with either another player or the computer,
+                guessing the
+                location of creatures on a grid. On each guess, you may uncover, creatures, traps, powerups and
+                sinkholes,
+                each of which will add an element of unpredictability to the game.</p>
+            <p>This was made as part of CS11002, and was my final project for the module.</p>
+
+        </section>
+
+        <!--start game section-->
+        <section>
+            <h2 class="h4 mt-4">Creating and Starting the Game</h2>
+
+            <!--horizontal line for section separation-->
+            <hr class="bg-secondary">
+            <p>When initially launching the program, the game grid will appear, but is unusable until a new game is
+                created,
+                or a game is loaded. If a new game is created, the program will first ask if you would like to play
+                the
+                computer, or another player. The program will then ask for the users name(s), and update the
+                scoreboard with
+                the relevant information.</p>
+        </section>
+
+        <!--gameplay section-->
+        <section>
+            <h2 class="h4 mt-4">Playing the Game</h2>
+
+            <!--horizontal line for section separation-->
+            <hr class="bg-secondary">
+
+            <h3 class="h5 mt-3">Basic Premise</h3>
+            <p>In a multiplayer game, the players will take turns guessing the locations of creatures. If they guess
+                correctly, they gain 5 points, and take another turn. If playing against the computer, the player
+                will take
+                their turn, and the computer will automatically make their guess. The player with the points when
+                all
+                creatures have been found is deemed to be the winner.</p>
+
+        </section>
+
+        <!--features section-->
+        <section>
+            <!--collapsable features button-->
+            <div class="d-flex align-items-center mb-3">
+                <h3 class="h5 mt-3 mb-0 me-2" style="cursor:pointer;" data-bs-toggle="collapse"
+                    data-bs-target="#additionalFeaturesCollapse" aria-expanded="false"
+                    aria-controls="additionalFeaturesCollapse">
+                    Additional Features
+                </h3>
+
+                <span data-bs-toggle="collapse" data-bs-target="#additionalFeaturesCollapse" aria-expanded="false"
+                    aria-controls="additionalFeaturesCollapse" style="cursor:pointer;">
+                    <!--down arrow icon-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <!--draws down arrow icon-->
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                </span>
+            </div>
+
+            <!--collapsable section for additional features-->
+            <div class="collapse" id="additionalFeaturesCollapse">
+                <div class="card card-body bg-dark text-white border-secondary">
+
+                    <!--GUI section-->
+                    <section class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8 order-md-1">
+                                <h4 class="h6 mt-3">GUI</h4>
+                                <p>As already mentioned, the game runs through a graphical user interface. This means
+                                    the user
+                                    can click on the tile they would like to guess, and the game will reveal the tile
+                                    through colours and
+                                    popup messages. In fact, all inputs and outputs are done through this GUI, and
+                                    nothing is received
+                                    or sent by the console. This allows for a seamless user experience, as everything is
+                                    right in front
+                                    of you.
+                                </p>
+                            </div>
+
+                            <!--figure tag for GUI image and caption-->
+                            <figure class="col-md-4 text-center order-md-2">
+                                <img src="images/projectNova/GUI.jpg" alt="GUI" class="img-fluid rounded shadow mb-2"
+                                    style="max-width: 100%;">
+                                <figcaption><small class="text-white-50">Graphical User Interface</small></figcaption>
+                            </figure>
+
+                        </div>
+                    </section>
+
+                    <!--complex creatures section-->
+                    <section class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8 order-md-1">
+                                <h4 class="h6 mt-3">Complex Creatures</h4>
+                                <p>Creatures are not just single square objects, but rather, span across multiple
+                                    squares, in
+                                    all different shapes in sizes. The game contains 10 types of creatures, and each one
+                                    will spawn
+                                    once per game, in a random location and orientation. When clicked, a creature cell
+                                    will turn either
+                                    green or blue, depending on the player that found it. When a player reveals the last
+                                    square of a
+                                    creature, the entire creature will turn pink, and said player is awarded an
+                                    additional 5 points</p>
+                            </div>
+
+                            <!--figure tag for complex creatures image and caption-->
+                            <figure class="col-md-4 text-center order-md-2">
+                                <img src="images/projectNova/complexCreature.jpg" alt="Complex Creatures"
+                                    class="img-fluid rounded shadow mb-2" style="max-width: 150px; width: 100%;">
+                                <figcaption><small class="text-white-50">Complex Creatures</small></figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!--health section-->
+                    <section class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8 order-md-1">
+                                <h4 class="h6 mt-3">Health</h4>
+                                <p>Each player starts with a base 100hp. This can be increased through powerups, or
+                                    decreased by
+                                    traps. If a players health reaches zero at any point, they immediately lose.</p>
+                            </div>
+
+                            <!--figure tag for health image and caption-->
+                            <figure class="col-md-4 text-center order-md-2">
+                                <img src="images/projectNova/HP.jpg" alt="Health" class="img-fluid rounded shadow mb-2"
+                                    style="max-width: 100%;">
+                                <figcaption><small class="text-white-50">Health System</small></figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!--booby traps section-->
+                    <section class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8 order-md-1">
+                                <h4 class="h6 mt-3">Booby Traps</h4>
+                                <p>There are three types of booby traps: sea mines, bombfish, and kelp. Each trap will
+                                    generate
+                                    a random amount of times, in random locations on the grid. Sea mines will make the
+                                    player lose 20hp,
+                                    bombfish will make the player lose 10 points, and kelp will tangle the player,
+                                    making them lose a
+                                    turn. When clicked, the program will notify the user of what trap they have
+                                    discovered, its effect, and
+                                    its square on the grid will be coloured in red.</p>
+                            </div>
+
+                            <!--figure tag for booby traps image and caption-->
+                            <figure class="col-md-4 text-center order-md-2">
+                                <img src="images/projectNova/Kelp.jpg" alt="Booby Traps"
+                                    class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                                <figcaption><small class="text-white-50">Booby Traps</small></figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!--power ups section-->
+                    <section class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8 order-md-1">
+                                <h4 class="h6 mt-3">Power Ups</h4>
+                                <p>There are three types of powerups: Health boosts, extra turns, and the reveal. Health
+                                    boosts
+                                    and extra turns are fairly self-explanatory, providing 20hp, and a bonus turn
+                                    respectively. The reveal
+                                    powerup will reveal the location of a random creature for the player. When clicked,
+                                    the program will
+                                    notify the user of the powerup and its effect, and the square will be coloured in
+                                    yellow.</p>
+                            </div>
+
+                            <!--figure tag for power ups image and caption-->
+                            <figure class="col-md-4 text-center order-md-2">
+                                <img src="images/projectNova/powerup.jpg" alt="Power Ups"
+                                    class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                                <figcaption><small class="text-white-50">Power Ups</small></figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!--sinkholes section-->
+                    <section class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-8 order-md-1">
+                                <h4 class="h6 mt-3">Sinkholes</h4>
+                                <p>Sinkholes are rare, but when found, will instantly remove a creature from the game,
+                                    and award the
+                                    player 10 points. The square will be coloured in purple.</p>
+                            </div>
+
+                            <!--figure tag for sinkholes image and caption-->
+                            <figure class="col-md-4 text-center order-md-2">
+                                <img src="images/projectNova/sinkhole.jpg" alt="Sinkholes"
+                                    class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                                <figcaption><small class="text-white-50">Sinkholes</small></figcaption>
+                            </figure>
+                        </div>
+                    </section>
                 </div>
             </div>
+        </section>
+        <!--end of collapsable section-->
+
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 order-md-1">
+                <h4 class="h6 mt-3">Health</h4>
+                <p>Each player starts with a base 100hp. This can be increased through powerups, or decreased by
+                    traps.
+                    If a players health reaches zero at any point, they immediately lose.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="images/projectNova/HP.jpg" alt="Health" class="img-fluid rounded shadow mb-2"
+                    style="max-width: 100%;">
+                <div><small class="text-white-50">Health System</small></div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 order-md-1">
+                <h4 class="h6 mt-3">Booby Traps</h4>
+                <p>There are three types of booby traps: sea mines, bombfish, and kelp. Each trap will generate
+                    a random
+                    amount of times, in random locations on the grid. Sea mines will make the player lose 20hp,
+                    bombfish
+                    will make the player lose 10 points, and kelp will tangle the player, making them lose a
+                    turn. When
+                    clicked, the program will notify the user of what trap they have discovered, its effect, and
+                    its
+                    square on the grid will be coloured in red.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="images/projectNova/Kelp.jpg" alt="Booby Traps" class="img-fluid rounded shadow mb-2"
+                    style="max-width: 100%;">
+                <div><small class="text-white-50">Booby Traps</small></div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 order-md-1">
+                <h4 class="h6 mt-3">Power Ups</h4>
+                <p>There are three types of powerups: Health boosts, extra turns, and the reveal. Health boosts
+                    and
+                    extra turns are fairly self-explanatory, providing 20hp, and a bonus turn respectively. The
+                    reveal
+                    on the other hand is a bit more fancy. It will reveal the location of a random creature cell
+                    on the
+                    grid. This is especially useful for finding those tricky small creatures, when all the big
+                    ones have
+                    been found. Like traps, when clicked the program will notify the user of the power up and
+                    its
+                    effect. The associated square on the grid will also be coloured in white.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="images/projectNova/PowerUp.jpg" alt="Power Ups" class="img-fluid rounded shadow mb-2"
+                    style="max-width: 100%;">
+                <div><small class="text-white-50">Power Ups</small></div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 order-md-1">
+                <h4 class="h6 mt-3">Sinkholes</h4>
+                <p>Completing the trifecta of the additional elements is the sinkhole. This special square will
+                    act as
+                    though the user who found the sinkhole has activated all neighbouring 8 cells. This includes
+                    gaining
+                    score from creatures, and also power ups! What makes sinkholes dangerous however, is they
+                    can also
+                    activate traps. When multiple sinkholes are in close proximity, this can start a chain
+                    reaction, for
+                    better or for worse. When found, sinkholes are coloured in black.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="images/projectNova/Sinkhole.jpg" alt="Sinkholes" class="img-fluid rounded shadow mb-2"
+                    style="max-width: 100%;">
+                <div><small class="text-white-50">Sinkholes</small></div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 order-md-1">
+                <h4 class="h6 mt-3">Turn Limits</h4>
+                <p>At the centre of the scoreboard is a timer, which will count down from 10 seconds at the
+                    start of
+                    each turn. If it runs out, play immediately switches to the other user. This is more to
+                    speed up
+                    gameplay.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="images/projectNova/Timer.jpg" alt="Turn Limits" class="img-fluid rounded shadow mb-2"
+                    style="max-width: 100%;">
+                <div><small class="text-white-50">Turn Limits</small></div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 order-md-1">
+                <h4 class="h6 mt-3">Computer Player</h4>
+                <p>As mentioned previously, at the start of the game, the user has the option to play against
+                    the
+                    computer. This computer is fairly stupid, basically blind guessing random squares across the
+                    board.
+                    A more intelligent version was considered, however for a simple prototype game, it was
+                    deemed too
+                    complicated. This version does work however, and provides a reasonable oppent, especially
+                    for a new
+                    player.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="images/projectNova/Computer.jpg" alt="Computer Player" class="img-fluid rounded shadow mb-2"
+                    style="max-width: 100%;">
+                <div><small class="text-white-50">Computer Player</small></div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 order-md-1">
+                <h4 class="h6 mt-3">Difficulties</h4>
+                <p>When creating a new game, the user can choose between five difficulties: Freeplay, easy,
+                    medium, hard
+                    and impossible. This affects the maximum number of traps, powerups and sinkholes that can be
+                    generated. For full details, see the extended evaluation.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="images/projectNova/Difficulties.jpg" alt="Difficulties" class="img-fluid rounded shadow mb-2"
+                    style="max-width: 100%;">
+                <div><small class="text-white-50">Difficulties</small></div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8 order-md-1">
+                <h4 class="h6 mt-3">Saving and Loading</h4>
+                <p>The game allows the user to save the current game state to local storage, and then load it
+                    later on.
+                    This works for both single and multiplayer games. The user can also choose the location of
+                    the save
+                    file through the a built in file browser.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="images/projectNova/Load.jpg" alt="Saving and Loading" class="img-fluid rounded shadow mb-2"
+                    style="max-width: 100%;">
+                <div><small class="text-white-50">Saving and Loading</small></div>
+            </div>
+        </div>
+        </div>
         </div>
         <h2 class="h4 mt-4">Design Considerations</h2>
         <hr class="bg-secondary">
