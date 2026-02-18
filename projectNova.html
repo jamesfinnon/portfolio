@@ -274,6 +274,126 @@
         </section>
         <!--end of collapsable section-->
                 <!-- Post-features: semantic sections for each feature -->
+                <section class="mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="h6 mt-3">Health</h4>
+                            <p>Each player starts with a base 100hp. This can be increased through powerups, or decreased by
+                                traps. If a players health reaches zero at any point, they immediately lose.</p>
+                        </div>
+                        <figure class="col-md-4 text-center order-md-2">
+                            <img src="images/projectNova/HP.jpg" alt="Health" class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                            <figcaption><small class="text-white-50">Health System</small></figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="h6 mt-3">Booby Traps</h4>
+                            <p>There are three types of booby traps: sea mines, bombfish, and kelp. Each trap will generate
+                                a random amount of times, in random locations on the grid. Sea mines will make the player lose 20hp,
+                                bombfish will make the player lose 10 points, and kelp will tangle the player, making them lose a
+                                turn. When clicked, the program will notify the user of what trap they have discovered, its effect, and
+                                its square on the grid will be coloured in red.</p>
+                        </div>
+                        <figure class="col-md-4 text-center order-md-2">
+                            <img src="images/projectNova/Kelp.jpg" alt="Booby Traps" class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                            <figcaption><small class="text-white-50">Booby Traps</small></figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="h6 mt-3">Power Ups</h4>
+                            <p>There are three types of powerups: Health boosts, extra turns, and the reveal. Health boosts
+                                and extra turns are fairly self-explanatory, providing 20hp, and a bonus turn respectively. The
+                                reveal on the other hand is a bit more fancy. It will reveal the location of a random creature cell
+                                on the grid. This is especially useful for finding those tricky small creatures, when all the big
+                                ones have been found. Like traps, when clicked the program will notify the user of the power up and
+                                its effect. The associated square on the grid will also be coloured in white.</p>
+                        </div>
+                        <figure class="col-md-4 text-center order-md-2">
+                            <img src="images/projectNova/PowerUp.jpg" alt="Power Ups" class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                            <figcaption><small class="text-white-50">Power Ups</small></figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="h6 mt-3">Sinkholes</h4>
+                            <p>Completing the trifecta of the additional elements is the sinkhole. This special square will
+                                act as though the user who found the sinkhole has activated all neighbouring 8 cells. This includes
+                                gaining score from creatures, and also power ups! What makes sinkholes dangerous however, is they
+                                can also activate traps. When multiple sinkholes are in close proximity, this can start a chain
+                                reaction, for better or for worse. When found, sinkholes are coloured in black.</p>
+                        </div>
+                        <figure class="col-md-4 text-center order-md-2">
+                            <img src="images/projectNova/Sinkhole.jpg" alt="Sinkholes" class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                            <figcaption><small class="text-white-50">Sinkholes</small></figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="h6 mt-3">Turn Limits</h4>
+                            <p>At the centre of the scoreboard is a timer, which will count down from 10 seconds at the
+                                start of each turn. If it runs out, play immediately switches to the other user. This is more to
+                                speed up gameplay.</p>
+                        </div>
+                        <figure class="col-md-4 text-center order-md-2">
+                            <img src="images/projectNova/Timer.jpg" alt="Turn Limits" class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                            <figcaption><small class="text-white-50">Turn Limits</small></figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="h6 mt-3">Computer Player</h4>
+                            <p>As mentioned previously, at the start of the game, the user has the option to play against
+                                the computer. This computer is fairly stupid, basically blind guessing random squares across the
+                                board. A more intelligent version was considered, however for a simple prototype game, it was
+                                deemed too complicated. This version does work however, and provides a reasonable oppent, especially
+                                for a new player.</p>
+                        </div>
+                        <figure class="col-md-4 text-center order-md-2">
+                            <img src="images/projectNova/Computer.jpg" alt="Computer Player" class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                            <figcaption><small class="text-white-50">Computer Player</small></figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="h6 mt-3">Difficulties</h4>
+                            <p>When creating a new game, the user can choose between five difficulties: Freeplay, easy,
+                                medium, hard and impossible. This affects the maximum number of traps, powerups and sinkholes that can be
+                                generated. For full details, see the extended evaluation.</p>
+                        </div>
+                        <figure class="col-md-4 text-center order-md-2">
+                            <img src="images/projectNova/Difficulties.jpg" alt="Difficulties" class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                            <figcaption><small class="text-white-50">Difficulties</small></figcaption>
+                        </figure>
+                    </div>
+                </section>
+                <section class="mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 order-md-1">
+                            <h4 class="h6 mt-3">Saving and Loading</h4>
+                            <p>The game allows the user to save the current game state to local storage, and then load it
+                                later on. This works for both single and multiplayer games. The user can also choose the location of
+                                the save file through the a built in file browser.</p>
+                        </div>
+                        <figure class="col-md-4 text-center order-md-2">
+                            <img src="images/projectNova/Load.jpg" alt="Saving and Loading" class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
+                            <figcaption><small class="text-white-50">Saving and Loading</small></figcaption>
+                        </figure>
+                    </div>
+                </section>
         </div>
         </div>
         <h2 class="h4 mt-4">Design Considerations</h2>
