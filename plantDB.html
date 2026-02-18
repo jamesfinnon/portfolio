@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--sets width of content to be responsive  to device and links to stylesheet-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
+<!--sets background to dark and text to white through bootstrap-->
 <body class="bg-dark text-white">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
@@ -57,104 +58,86 @@
         <h2 class="h4 mt-4">Features</h2>
         <hr class="bg-secondary">
         <h3 class="h5 mt-3">Database</h3>
-        <div class="row align-items-center mb-4">
-            <div class="col-md-8 order-md-1">
-                <p>In the background, this program runs off of an arraylist of Plant objects. Each object within the
-                    arraylist
-                    contains information related to a specific plant species, which is entered by the user.</p>
-                <p>This mimics a real database system, with each plant object containing fields such as species name,
-                    leaf area,
-                    etc.</p>
-                <p>The use of an arraylist allows for easier addition and removal of plant entries, as well as efficient
-                    sorting
-                    and searching.</p>
+        <section class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8 order-md-1">
+                    <p>In the background, this program runs off of an arraylist of Plant objects. Each object within the
+                        arraylist contains information related to a specific plant species, which is entered by the user.</p>
+                    <p>This mimics a real database system, with each plant object containing fields such as species name,
+                        leaf area, etc.</p>
+                    <p>The use of an arraylist allows for easier addition and removal of plant entries, as well as efficient
+                        sorting and searching.</p>
+                </div>
+                <figure class="col-md-4 text-center order-md-2">
+                    <img src="images/plantDB/plantObject.jpg" alt="Plant Object" class="img-fluid rounded shadow mb-2">
+                    <figcaption><small class="text-white-50">Plant object structure</small></figcaption>
+                </figure>
             </div>
-            <div class="col-md-4 text-center order-md-2">
-                <img src="images/plantDB/plantObject.jpg" alt="Plant Object" class="img-fluid rounded shadow mb-2"
-                    style="max-width: 100%;">
-                <div><small class="text-white-50">Plant object structure</small></div>
-            </div>
-        </div>
+        </section>
         <h3 class="h5 mt-3">Menu System</h3>
-        <div class="row align-items-center mb-4">
-            <div class="col-md-8 order-md-1">
-                <p>The entire program revolves around the menu, which calls certain methods and functions when options
-                    are
-                    selected. </p>
-                <p>Due to the way it was implemented, if in future a second database was to run off of the same program,
-                    then
-                    the two menus could co-exist with no problems. </p>
+        <section class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8 order-md-1">
+                    <p>The entire program revolves around the menu, which calls certain methods and functions when options are selected. </p>
+                    <p>Due to the way it was implemented, if in future a second database was to run off of the same program, then the two menus could co-exist with no problems. </p>
+                </div>
+                <figure class="col-md-4 text-center order-md-2">
+                    <img src="images/plantDB/Menu.jpg" alt="Menu System" class="img-fluid rounded shadow mb-2">
+                    <figcaption><small class="text-white-50">Menu system</small></figcaption>
+                </figure>
             </div>
-            <div class="col-md-4 text-center order-md-2">
-                <img src="images/plantDB/Menu.jpg" alt="Menu System" class="img-fluid rounded shadow mb-2"
-                    style="max-width: 100%;">
-                <div><small class="text-white-50">Menu system</small></div>
-            </div>
-            <p>The entire program revolves around the menu, which calls certain methods and functions when options are
-                selected. </p>
-            <p>Due to the way it was implemented, if in future a second database was to run off of the same program,
-                then
-                the two menus could co-exist with no problems. </p>
-        </div>
-        </div>
+        </section>
         <h3 class="h5 mt-3">Adding and Deleting Plants</h3>
-        <div class="row align-items-center mb-4">
-            <div class="col-md-8 order-md-1">
-                <p>Add new plant entries to the collection or remove existing ones as needed, keeping the database up to
-                    date.</p>
+        <section class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8 order-md-1">
+                    <p>Add new plant entries to the collection or remove existing ones as needed, keeping the database up to date.</p>
+                </div>
+                <figure class="col-md-4 text-center order-md-2">
+                    <img src="images/plantDB/AddDelete.jpg" alt="Add/Delete Plants" class="img-fluid rounded shadow mb-2">
+                    <figcaption><small class="text-white-50">Adding and deleting plants</small></figcaption>
+                </figure>
             </div>
-            <div class="col-md-4 text-center order-md-2">
-                <img src="images/plantDB/AddDelete.jpg" alt="Add/Delete Plants" class="img-fluid rounded shadow mb-2"
-                    style="max-width: 100%;">
-                <div><small class="text-white-50">Adding and deleting plants</small></div>
-            </div>
-        </div>
+        </section>
         <h3 class="h5 mt-3">Sorting the Collection</h3>
-        <div class="row align-items-center mb-4">
-            <div class="col-md-8 order-md-1">
-                <p>The database menu contains multiple options for how the user might want to sort the database. This is
-                    then
-                    committed to the arraylist, and the resulting collection can be viewed by the user.</p>
+        <section class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8 order-md-1">
+                    <p>The database menu contains multiple options for how the user might want to sort the database. This is then committed to the arraylist, and the resulting collection can be viewed by the user.</p>
+                </div>
+                <figure class="col-md-4 text-center order-md-2">
+                    <img src="images/plantDB/sorting.jpg" alt="Sorting Collection" class="img-fluid rounded shadow mb-2">
+                    <figcaption><small class="text-white-50">Sorting the collection</small></figcaption>
+                </figure>
             </div>
-            <div class="col-md-4 text-center order-md-2">
-                <img src="images/plantDB/sorting.jpg" alt="Sorting Collection" class="img-fluid rounded shadow mb-2"
-                    style="max-width: 100%;">
-                <div><small class="text-white-50">Sorting the collection</small></div>
-            </div>
-            <p>The database menu contains multiple options for how the user might want to sort the database. This is
-                then
-                committed to the arraylist, and the resulting collection can be viewed by the user.</p>
-        </div>
+        </section>
         </div>
         <h3 class="h5 mt-3">Viewing the Whole Collection</h3>
-        <div class="row align-items-center mb-4">
-            <div class="col-md-8 order-md-1">
-                <p>To display the entire collection of plants, the program uses a combination of multiple methods to
-                    create a
-                    table and display it to the user.</p>
+        <section class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8 order-md-1">
+                    <p>To display the entire collection of plants, the program uses a combination of multiple methods to create a table and display it to the user.</p>
+                </div>
+                <figure class="col-md-4 text-center order-md-2">
+                    <img src="images/plantDB/viewCollection.jpg" alt="View Collection" class="img-fluid rounded shadow mb-2">
+                    <figcaption><small class="text-white-50">Viewing the collection</small></figcaption>
+                </figure>
             </div>
-            <div class="col-md-4 text-center order-md-2">
-                <img src="images/plantDB/viewCollection.jpg" alt="View Collection" class="img-fluid rounded shadow mb-2"
-                    style="max-width: 100%;">
-                <div><small class="text-white-50">Viewing the collection</small></div>
-            </div>
-        </div>
+        </section>
         <h3 class="h5 mt-3">Calculating the Evaporation Rate</h3>
-        <div class="row align-items-center mb-4">
-            <div class="col-md-8 order-md-1">
-                <p>The program works in the background to calculate both the leaf area and the evaporation rate. This is
-                    done in
-                    the background whenever the user updates either the leaf length or width. </p>
-                <p>The results from these calculations are shown in the table whenever the user either searches for a
-                    plant, or
-                    views the entire collection.</p>
+        <section class="mb-4">
+            <div class="row align-items-center">
+                <div class="col-md-8 order-md-1">
+                    <p>The program works in the background to calculate both the leaf area and the evaporation rate. This is done in the background whenever the user updates either the leaf length or width. </p>
+                    <p>The results from these calculations are shown in the table whenever the user either searches for a plant, or views the entire collection.</p>
+                </div>
+                <figure class="col-md-4 text-center order-md-2">
+                    <img src="images/plantDB/evapRate.jpg" alt="Evaporation Rate Calculation"
+                        class="img-fluid rounded shadow mb-2">
+                    <figcaption><small class="text-white-50">Evaporation rate calculation</small></figcaption>
+                </figure>
             </div>
-            <div class="col-md-4 text-center order-md-2">
-                <img src="images/plantDB/evapRate.jpg" alt="Evaporation Rate Calculation"
-                    class="img-fluid rounded shadow mb-2" style="max-width: 100%;">
-                <div><small class="text-white-50">Evaporation rate calculation</small></div>
-            </div>
-        </div>
+        </section>
     </main>
     <footer class="footer mt-auto py-3 bg-black text-white">
         <div class="container-fluid text-center">
