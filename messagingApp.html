@@ -53,73 +53,111 @@
 
         <section class="mb-4">
             <h3 class="h5 mt-3">Chats and Messaging</h3>
-            <div class="row align-items-center">
-                <div class="col-md-8 order-md-1">
-                    <p>Create one-to-one and group chats, send messages, and see recent activity from the chat list.
-                        Chat previews show the latest message, its sender and time, and read status for messages sent
-                        by the current user.</p>
-                    <p>Within a conversation, users can rename or delete the chat, edit or remove their own messages,
-                        and react to messages with emoji reactions.</p>
-                </div>
-                <figure class="col-md-4 text-center order-md-2">
-                    <img src="images/messagingApp/ChatList.jpg" alt="Recent chat list with message previews"
-                        class="img-fluid rounded shadow mb-2">
-                    <figcaption><small class="text-white-50">Recent chat list</small></figcaption>
-                    <img src="images/messagingApp/Chat.jpg" alt="Conversation view with messages and reactions"
-                        class="img-fluid rounded shadow mt-3 mb-2">
-                    <figcaption><small class="text-white-50">Conversation view</small></figcaption>
-                </figure>
-            </div>
+            <p>Create one-to-one and group chats, send messages, and see recent activity from the chat list.
+                Chat previews show the latest message, its sender and time, and read status for messages sent
+                by the current user.</p>
+            <p>Within a conversation, users can rename or delete the chat, edit or remove their own messages,
+                and react to messages with emoji reactions.</p>
         </section>
 
         <section class="mb-4">
             <h3 class="h5 mt-3">Contacts and Profiles</h3>
-            <div class="row align-items-center">
-                <div class="col-md-8 order-md-1">
-                    <p>Manage contacts with names, usernames, phone numbers, and profile pictures. The contact list can
-                        be sorted alphabetically or by recently added, and contact details provide access to
-                        conversations.</p>
-                    <p>Users can edit their own profile, choose a profile picture, and switch between accounts in the
-                        application.</p>
-                </div>
-                <figure class="col-md-4 text-center order-md-2">
-                    <img src="images/messagingApp/Contacts.jpg" alt="Contacts list"
-                        class="img-fluid rounded shadow mb-2">
-                    <figcaption><small class="text-white-50">Contacts list</small></figcaption>
-                    <img src="images/messagingApp/Profile.jpg" alt="User profile"
-                        class="img-fluid rounded shadow mt-3 mb-2">
-                    <figcaption><small class="text-white-50">User profile</small></figcaption>
-                </figure>
-            </div>
+            <p>Manage contacts with names, usernames, phone numbers, and profile pictures. The contact list can
+                be sorted alphabetically or by recently added, and contact details provide access to
+                conversations.</p>
+            <p>Users can edit their own profile, choose a profile picture, and switch between accounts in the
+                application.</p>
         </section>
 
         <section class="mb-4">
             <h3 class="h5 mt-3">Search</h3>
-            <div class="row align-items-center">
-                <div class="col-md-8 order-md-1">
-                    <p>Search across contact names and usernames, chat names, and message content to find people or
-                        return to a conversation.</p>
-                </div>
-                <figure class="col-md-4 text-center order-md-2">
-                    <img src="images/messagingApp/Search.jpg" alt="Search results for contacts, chats, and messages"
-                        class="img-fluid rounded shadow mb-2">
-                    <figcaption><small class="text-white-50">Search results</small></figcaption>
-                </figure>
-            </div>
+            <p>Search across contact names and usernames, chat names, and message content to find people or
+                return to a conversation.</p>
         </section>
 
         <section class="mb-4">
             <h3 class="h5 mt-3">Saving and Loading Accounts</h3>
-            <div class="row align-items-center">
-                <div class="col-md-8 order-md-1">
-                    <p>Save account data to a local file and load it again later from the profile page. This allows
-                        users to keep their locally managed accounts and conversations between sessions.</p>
+            <p>Save account data to a local file and load it again later from the profile page. This allows
+                users to keep their locally managed accounts and conversations between sessions.</p>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h4 mt-4">Screenshots</h2>
+            <hr class="bg-secondary">
+            <p class="mb-3">Expand the gallery to view screenshots of the application.</p>
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#messagingAppGallery" aria-expanded="false" aria-controls="messagingAppGallery">
+                Show Screenshots
+            </button>
+
+            <div class="collapse mt-4" id="messagingAppGallery">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 bg-dark text-white border-secondary">
+                            <img src="images/messagingApp/ChatList.jpg"
+                                alt="Chat list displaying recent conversations and message previews"
+                                class="card-img-top bg-black" style="height: 220px; object-fit: contain;">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Chat List</h3>
+                                <p class="card-text">Recent conversations with message previews, senders, and
+                                    timestamps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-dark text-white border-secondary">
+                            <img src="images/messagingApp/Chat.jpg"
+                                alt="Conversation screen showing messages and chat controls"
+                                class="card-img-top bg-black" style="height: 220px; object-fit: contain;">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Conversation</h3>
+                                <p class="card-text">The messaging view for sending and managing messages in a chat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-dark text-white border-secondary">
+                            <img src="images/messagingApp/Contacts.jpg" alt="Contacts list"
+                                class="card-img-top bg-black" style="height: 220px; object-fit: contain;">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Contacts</h3>
+                                <p class="card-text">The saved contacts list, with options to sort and open contact
+                                    details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-dark text-white border-secondary">
+                            <img src="images/messagingApp/Profile.jpg" alt="User profile page"
+                                class="card-img-top bg-black" style="height: 220px; object-fit: contain;">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Profile</h3>
+                                <p class="card-text">The user profile and account options.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-dark text-white border-secondary">
+                            <img src="images/messagingApp/Search.jpg" alt="Search results in the messaging app"
+                                class="card-img-top bg-black" style="height: 220px; object-fit: contain;">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Search</h3>
+                                <p class="card-text">Search results across contacts, chats, and messages.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 bg-dark text-white border-secondary">
+                            <img src="images/messagingApp/Save.jpg" alt="Account save and load options"
+                                class="card-img-top bg-black" style="height: 220px; object-fit: contain;">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Save and Load</h3>
+                                <p class="card-text">Options for saving an account to a local file and loading it
+                                    later.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <figure class="col-md-4 text-center order-md-2">
-                    <img src="images/messagingApp/Save.jpg" alt="Account save and load controls"
-                        class="img-fluid rounded shadow mb-2">
-                    <figcaption><small class="text-white-50">Account save and load controls</small></figcaption>
-                </figure>
             </div>
         </section>
     </main>
